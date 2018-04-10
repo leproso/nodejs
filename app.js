@@ -7,11 +7,11 @@ const server = http.createServer(app);
 
 //create connection
 const db = mysql.createConnection({
-  host     : process.env.OPENSHIFT_MYSQL_DB_HOST,
-  user     : process.env.OPENSHIFT_MYSQL_DB_USERNAME,
-  password : process.env.OPENSHIFT_MYSQL_DB_PASSWORD,
-  port     : process.env.OPENSHIFT_MYSQL_DB_PORT,
-  database : process.env.OPENSHIFT_APP_NAME
+  host     : process.env.MYSQL_SERVICE_HOST,
+  user     : process.env.databaseuser,
+  password : process.env.databasepassword,
+  database : process.env.databasename,
+  port     : process.env.MYSQL_SERVICE_PORT
 });
 
 //connect
